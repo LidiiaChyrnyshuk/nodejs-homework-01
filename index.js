@@ -31,6 +31,6 @@ program
 	.option("-e, --email <type>", "user email")
 	.option("-p, --phone <type>", "user phone");
 
-program.parse();
-const options = program.opts();
-invokeAction(options);
+program.parse(process.argv);
+const argv = program.opts();
+invokeAction(argv);
